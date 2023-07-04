@@ -6,11 +6,11 @@ public class armstrong {
         int n = in.nextInt();
         
 
-        armstrong(n);
+        isArmstrong(n);
 
     }
 
-    static void armstrong(int n){
+    static void isArmstrong(int n){
         int sum = 0;
         int original_number = n;
         while(n > 0){

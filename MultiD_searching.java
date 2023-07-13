@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class MultiD_searching {
@@ -14,18 +15,19 @@ public class MultiD_searching {
 
         int target_element = sc.nextInt();
 
-        System.out.println(search(arr, target_element));
+        int[] result = search(arr, target_element);
+        System.out.println(Arrays.toString(result));
 
     }
 
-    static int search(int[][] arr, int target_element) {
+    static int[] search(int[][] arr, int target_element) {
         for (int rows = 0; rows < arr.length; rows++) {
             for (int cols = 0; cols < arr[rows].length; cols++) {
                 if (target_element == arr[rows][cols]) {
-                    return 1;
+                    return new int[]{rows,cols};
                 }
             }
         }
-        return -1;
+        return new int[]{-1,-1};
     }
 }

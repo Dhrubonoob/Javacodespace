@@ -9,7 +9,7 @@ public class PracticeSet_two {
             {1,2,3,4},
             {5,6,7,8},
             {9,10,11,12},
-            {13,14,15,16}
+            {13,14,15,19}
         };
         int target = sc.nextInt();
       //  int ans = Multidimensional_searching(arr, target);

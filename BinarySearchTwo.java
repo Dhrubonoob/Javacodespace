@@ -1,9 +1,9 @@
 public class BinarySearchTwo {
     public static void main(String[] args) {
 
-        int[] arr = { 1, 2, 3, 4, 5, 6, 7 };
+        int[] arr = { 11, 22, 35, 48, 57, 69, 77 };
 
-        int target = 6;
+        int target = 35;
         int start = 0;
         int end = arr.length - 1;
 
@@ -17,7 +17,7 @@ public class BinarySearchTwo {
             return -1;
         }
 
-        int mid = (start + (end - start)) / 2;
+        int mid = start + (end - start) / 2;
 
         if (arr[mid] == target) {
             return mid;

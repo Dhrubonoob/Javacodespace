@@ -3,7 +3,7 @@ public class BinarySearchTwo {
 
         int[] arr = { 11, 22, 35, 48, 57, 69, 77 };
 
-        int target = 35;
+        int target = 66;
         int start = 0;
         int end = arr.length - 1;
 
@@ -24,8 +24,8 @@ public class BinarySearchTwo {
         }
 
         if (target < arr[mid]) {
-            return binarySearch(arr, target, start, end - 1);
+            return binarySearch(arr, target, start, mid - 1);
         }
-        return binarySearch(arr, target, start + 1, end);
+        return binarySearch(arr, target, mid + 1, end);
     }
 }

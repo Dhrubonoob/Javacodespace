@@ -4,7 +4,8 @@ public class RecursionBasic {
         // int ans = func(5);
         // System.out.println(ans);
         // System.out.println(funcRev(5));
-        System.out.println(factorial(5));
+        // System.out.println(factorial(5));
+        System.out.println(sum(5));
     }
 
     static int func(int n){
@@ -30,5 +31,12 @@ public class RecursionBasic {
             return 1;
         }
         return n * factorial(n-1);
+    }
+
+    static int sum(int n){
+        if(n<=1){
+            return 1;
+        }
+        return n + sum(n-1);
     }
 }

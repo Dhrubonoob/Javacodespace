@@ -5,7 +5,8 @@ public class RecursionBasic {
         // System.out.println(ans);
         // System.out.println(funcRev(5));
         // System.out.println(factorial(5));
-        System.out.println(sum(5));
+        // System.out.println(sum(5));
+        System.out.println(sumOfDigits(45812));
     }
 
     static int func(int n){
@@ -38,5 +39,13 @@ public class RecursionBasic {
             return 1;
         }
         return n + sum(n-1);
+    }
+
+    static int sumOfDigits(int n){
+        if(n==0){
+            return 0;
+        }
+        int rem = n % 10;
+        return sumOfDigits(n/10) + rem;  
     }
 }

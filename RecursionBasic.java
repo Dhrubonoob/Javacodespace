@@ -7,7 +7,19 @@ public class RecursionBasic {
         // System.out.println(factorial(5));
         // System.out.println(sum(5));
         // System.out.println(sumOfDigits(45812));
-        System.out.println(productOftheDigits(123456));
+        // System.out.println(productOftheDigits(123456));
+        System.out.println(reverseNumber(45678, 0));
+        
+    }
+
+    static int reverseNumber(int n, int sum){
+        // int sum = 0;
+        if(n == 0){
+            return sum;
+        }
+        int rem = n % 10;
+        sum = sum * 10 + rem;
+        return reverseNumber((n/10), sum);
     }
 
     static int func(int n){

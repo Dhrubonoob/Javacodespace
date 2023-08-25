@@ -1,6 +1,6 @@
 public class PalindromeNumberwithRecursion {
     public static void main(String args[]){
-        int num = 12321;
+        int num = 1234;
         
 
         if(isPalindrome(num)){
@@ -11,16 +11,28 @@ public class PalindromeNumberwithRecursion {
     }
 
     static boolean isPalindrome(int num){
-        return palindromeNumber(num, 0);
+       int result =  reverseNumber(num, 0);
+
+        return result == num;
     }
 
-    static boolean palindromeNumber(int num, int sum){
-        if(num == 0 ){
-            return num == sum;
-        }else{
-        int rem = num % 10;
-        sum = sum * 10 + rem;
-        return palindromeNumber(num/10, sum);
+    static int reverseNumber(int n, int sum){
+        // int sum = 0;
+        if(n == 0){
+            return sum;
         }
+        int rem = n % 10;
+        sum = sum * 10 + rem;
+        return reverseNumber((n/10), sum);
     }
+
+    // static boolean palindromeNumber(int num, int sum){
+    //     if(num == 0 ){
+    //         return sum;
+    //     }else{
+    //     int rem = num % 10;
+    //     sum = sum * 10 + rem;
+    //     return palindromeNumber(num/10, sum);
+    //     }
+    // }
 }

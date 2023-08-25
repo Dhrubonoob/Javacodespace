@@ -12,6 +12,7 @@ public class RecursionBasic {
         
     }
 
+    //reverse
     static int reverseNumber(int n, int sum){
         // int sum = 0;
         if(n == 0){
@@ -40,6 +41,7 @@ public class RecursionBasic {
         
     }
 
+    //factorials
     static int factorial(int n){
         if(n == 1){
             return 1;
@@ -47,6 +49,7 @@ public class RecursionBasic {
         return n * factorial(n-1);
     }
 
+    //sum
     static int sum(int n){
         if(n<=1){
             return 1;
@@ -54,6 +57,7 @@ public class RecursionBasic {
         return n + sum(n-1);
     }
 
+    //sum of digits
     static int sumOfDigits(int n){
         if(n==0){
             return 0;
@@ -62,6 +66,8 @@ public class RecursionBasic {
         return sumOfDigits(n/10) + rem;  
     }
 
+
+    //product of digits
     static int productOftheDigits(int n){
         if(n<=1){
             return 1;

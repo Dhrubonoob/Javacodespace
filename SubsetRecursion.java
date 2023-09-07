@@ -1,6 +1,9 @@
+import java.util.ArrayList;
+
 public class SubsetRecursion {
     public static void main(String[] args) {
-        subSeq("", "abc");
+        // subSeq("", "abc");
+        System.out.println(subSetRet("", "abc"));
     }
 
     static void subSeq(String p, String up){
@@ -13,5 +16,21 @@ public class SubsetRecursion {
 
         subSeq(p+ch, up.substring(1));
         subSeq(p, up.substring(1));
+    }
+
+    static ArrayList<String> subSetRet(String p, String up){
+        if(up.isEmpty()){
+            ArrayList<String> list = new ArrayList<>();
+            list.add(p);
+            return list;
+        }
+
+        char ch = up.charAt(0);
+
+        ArrayList<String> left = subSetRet(p+ch, up.substring(1));
+        ArrayList<String> right = subSetRet(p, up.substring(1));
+
+        left.addAll(right);
+        return left;
     }
 }

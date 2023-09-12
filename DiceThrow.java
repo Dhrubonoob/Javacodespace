@@ -9,6 +9,7 @@ public class DiceThrow {
             return;
         }
 
+        //face of the dice is 6
         for (int i = 1; i <=6 && i<=target; i++) {
             diceThrow(p+i, target-i);
         }

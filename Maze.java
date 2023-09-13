@@ -22,6 +22,10 @@ public class Maze {
             return;
         }
 
+        if(r>1 && c>1){
+            path(p+'d', r-1, c-1);
+        }
+
         if(r>1){
             path(p+'D', r-1, c);
         }

@@ -22,6 +22,7 @@ public class Maze {
             return;
         }
 
+        //for the diagonal movement....
         if(r>1 && c>1){
             path(p+'d', r-1, c-1);
         }
